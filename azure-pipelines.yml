@@ -1,4 +1,10 @@
 # ASP.NET Core (.NET Framework)
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.sln'
+    feedsToUse: 'select'
+    vstsFeed: 'fd2c3dca-4288-4088-ab06-600749314fb3'
 - task: VSBuild@1
   inputs:
     solution: '**\*.sln'
